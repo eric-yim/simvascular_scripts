@@ -21,6 +21,15 @@ sims/
         2.vtp
         3.vtp
 """
+import sv
+import sys
+import vtk
+import os
+import numpy as np
+from shutil import copyfile
+sys.path.append(mdir)
+import graphics as gr
+import control_point_manipulation as manip
 #=========================================================================================
 #User Edits
 #Name of Main Directory
@@ -33,21 +42,8 @@ name = 'sim02/'
 expand_id = 2
 # array should either match size of outer control points, or be scalar
 expand_factor = np.ones(10,dtype=np.float32)*1.5 
-#=========================================================================================
-
-import sv
-import sys
-import vtk
-import os
-import numpy as np
-from shutil import copyfile
-sys.path.append(mdir)
-import graphics as gr
-import control_point_manipulation as manip
 
 newdir = mdir+'sims/' + name
-
-
 #=========================================================================================
 # File Structure
 def make_dirs():
