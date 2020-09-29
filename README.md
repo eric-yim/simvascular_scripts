@@ -9,4 +9,4 @@ This repository allows you to programmatically alter the cross sections of a blo
 1. Construct a segmentation through the SimVascular GUI.
 1. From the project's Segmentations folder, copy the .ctgr file to the current repository.
 1. Make edits at the top of the contour\_to\_mesh.py file to specify directory names and expansion of segmentation control points.
-1. In SimVascular, open the Python console and press play. (Note: graphics halt execution of code. and continue if graphics window is closed)
+1. In SimVascular, open the Python console and press play. (Note: graphics halt execution of code. Code continues if graphics window is closed.)
