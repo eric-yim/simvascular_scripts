@@ -21,6 +21,21 @@ sims/
         2.vtp
         3.vtp
 """
+#=========================================================================================
+#User Edits
+#Name of Main Directory
+mdir = "/home/ericyim/Desktop/sv_script/new-py-proj03/"
+# Segmentations File
+file_name = mdir+'raw_data/simple_coronary.ctgr'
+#Name of new simulation
+name = 'sim02/'
+# Manipulate one contour
+expand_id = 2
+# array should either match size of outer control points, or be scalar
+expand_factor = [1,1,1,1,1,2,2,2,2,2]
+
+newdir = mdir+'sims/' + name
+#=========================================================================================
 import sv
 import sys
 import vtk
@@ -30,21 +45,7 @@ from shutil import copyfile
 sys.path.append(mdir)
 import graphics as gr
 import control_point_manipulation as manip
-#=========================================================================================
-#User Edits
-#Name of Main Directory
-mdir = "/home/ericyim/Desktop/sv_script/new-py-proj02/"
-# Segmentations File
-file_name = mdir+'raw_data/simple_coronary.ctgr'
-#Name of new simulation
-name = 'sim02/'
-# Manipulate one contour
-expand_id = 2
-# array should either match size of outer control points, or be scalar
-expand_factor = np.ones(10,dtype=np.float32)*1.5 
-
-newdir = mdir+'sims/' + name
-#=========================================================================================
+expand_factor = np.array(expand_factor,dtype=np.float32)
 # File Structure
 def make_dirs():
     """
